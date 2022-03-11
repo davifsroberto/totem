@@ -1,5 +1,5 @@
 const baseUrl = {
-  urlMottu: 'https://hm-mottu-totem.azurewebsites.net/api/'
+  urlMottu: 'https://TODO:ENDPOINT_PROD/api/'
 };
 
 export const environment = {
