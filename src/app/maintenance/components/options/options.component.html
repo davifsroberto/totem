@@ -1,0 +1,66 @@
+<main class="container-fluid color-white bg-dark pt-title h-container">
+  <article class="row pb-option-title text-center d-flex flex-column">
+    <h1 class="mat-display-4 mb-title">Serviços</h1>
+    <h3 class="mat-display-3">Olá, João, escolha um serviço.</h3>
+  </article>
+
+  <article
+    class="row d-flex align-items-center flex-column justify-content-center"
+  >
+    <section class="font-bold">
+      <div
+        class="h-option-button-parent d-flex justify-content-center clickable"
+      >
+        <div
+          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
+        >
+          <i class="fa-regular fa-gauge fa-8x"></i>
+        </div>
+        <div
+          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
+          (click)="goToConfirmOption()"
+        >
+          <span class="mat-display-3 m-0 ml-option">Revisão</span>
+        </div>
+      </div>
+      <div
+        class="h-option-button-parent mt-option d-flex justify-content-center clickable"
+      >
+        <div
+          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
+        >
+          <i class="fa-regular fa-gear fa-8x"></i>
+        </div>
+        <div
+          class="bg-white w-option-button br-radius color-black d-flex align-items-center"
+          (click)="goToConfirmOption()"
+        >
+          <span class="mat-display-3 m-0 ml-option">Corretiva</span>
+        </div>
+      </div>
+      <div
+        class="h-option-button-parent mt-option d-flex justify-content-center clickable"
+      >
+        <div
+          class="color-mottu w-option-icon bl-radius d-flex align-items-center justify-content-center"
+        >
+          <i class="fa-regular fa-bolt fa-8x"></i>
+        </div>
+        <div
+          class="bg-white w-option-button br-radius color-black d-flex align-items-center"
+          (click)="goToQuickOptions()"
+        >
+          <span class="mat-display-3 m-0 ml-option">Rápidas</span>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <article class="row d-flex justify-content-center mb-last-article">
+    <span
+      class="clickable underline fixed-bottom mat-display-2"
+      (click)="backToStart()"
+      >Cancelar</span
+    >
+  </article>
+</main>

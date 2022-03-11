@@ -1,0 +1,41 @@
+<main id="start">
+  <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
+
+  <section>
+    <figure>
+      <img alt="logo-mottu" src="assets/logos/svg/mottu.svg" />
+    </figure>
+
+    <h1 class="mat-display-2">Manutenção</h1>
+  </section>
+
+  <form>
+    <h4>
+      <span>Insira seu CPF</span>
+      sem pontos ou traços
+    </h4>
+
+    <mat-form-field class="text-center cpf-input">
+      <input
+        [(ngModel)]="cpf"
+        matInput
+        name="cpfUser"
+        type="text"
+        class="text-center"
+        mask="000.000.000-99"
+        autocomplete="off"
+        inputmode="numeric"
+        placeholder="Ex: 000.000.000-00"
+      />
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      class="confirm-button"
+      (click)="nextStep()"
+    >
+      Avançar
+    </button>
+  </form>
+</main>

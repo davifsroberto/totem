@@ -1,0 +1,42 @@
+{
+  "name": "mottu-totem-front",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:homolog": "ng build --configuration homolog",
+    "build:production": "ng build --configuration production",
+    "watch": "ng build --watch --configuration development",
+    "pretty": "prettier --config ./.prettierrc --write \"./**/*.{ts,js,json,css,scss,html}\""
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.1.0",
+    "@angular/cdk": "^13.2.1",
+    "@angular/common": "~13.1.0",
+    "@angular/compiler": "~13.1.0",
+    "@angular/core": "~13.1.0",
+    "@angular/forms": "~13.1.0",
+    "@angular/material": "^13.2.1",
+    "@angular/platform-browser": "~13.1.0",
+    "@angular/platform-browser-dynamic": "~13.1.0",
+    "@angular/router": "~13.1.0",
+    "@fortawesome/fontawesome-pro": "^5.15.4",
+    "angular-notifier": "^11.0.0",
+    "ngx-mask": "^13.1.1",
+    "ngx-spinner": "^13.1.1",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.1.1",
+    "@angular/cli": "~13.1.1",
+    "@angular/compiler-cli": "~13.1.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "prettier": "^2.5.1",
+    "typescript": "~4.5.2"
+  }
+}

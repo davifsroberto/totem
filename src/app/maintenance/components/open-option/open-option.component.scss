@@ -1,0 +1,44 @@
+.bg-end {
+  background-image: url(../../../../assets/backgrounds/svg/background-end.svg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pl-1 {
+  padding-left: 0.25em;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.color-text-mottu {
+  color: #00b131;
+}
+
+.mb-title {
+  margin-bottom: 1em;
+}
+
+.mb-logo {
+  margin-bottom: 1.5em;
+}
+
+.mb-text {
+  margin-bottom: 0.5em;
+}
+
+.mt-article {
+  margin-top: 2em;
+}
+
+.close-button {
+  font-size: 3em;
+  width: 5em;
+  height: 2em;
+}

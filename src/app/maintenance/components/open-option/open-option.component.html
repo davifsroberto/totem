@@ -1,0 +1,35 @@
+<main class="container-fluid bg-end h-container pt-container color-white">
+  <article class="row d-flex flex-column align-items-center">
+    <figure>
+      <img
+        alt="logo-mottu"
+        src="assets/logos/svg/mottu.svg"
+        class="size-logo mb-logo"
+      />
+    </figure>
+    <h1 class="mat-display-4 mb-title">Serviço em Aberto</h1>
+  </article>
+
+  <article class="row mt-article d-flex flex-column align-items-center">
+    <h3 class="mb-text mat-display-3">Você já possui um serviço de:</h3>
+    <h3 class="color-text-mottu mb-text mat-display-3">"Manutenção"</h3>
+    <h3 class="mat-display-3">aberto deseja trocar?</h3>
+    <section class="mt-article">
+      <button
+        mat-flat-button
+        class="close-button"
+        color="primary"
+        (click)="backToStart()"
+      >
+        Fechar
+      </button>
+    </section>
+  </article>
+
+  <article class="row mt-article d-flex flex-column align-items-center">
+    <section (click)="goToOptions()" class="mt-article">
+      <span class="clickable underline mat-display-2">Avançar</span>
+      <i class="fa-solid fa-angle-right pl-1 fa-3x"></i>
+    </section>
+  </article>
+</main>

@@ -1,0 +1,37 @@
+<main id="access" class="color-white">
+  <app-spinner *ngIf="spinner"></app-spinner>
+
+  <section>
+    <figure>
+      <img alt="logo-mottu" src="assets/logos/svg/mottu.svg" />
+    </figure>
+
+    <h1 class="mat-display-2">Bem-vindo</h1>
+    <h3 class="mat-display-1">Infome o código de serviço<br />deste totem</h3>
+  </section>
+
+  <form>
+    <mat-form-field>
+      <input
+        [(ngModel)]="idTotem"
+        matInput
+        name="id"
+        type="text"
+        class=""
+        autocomplete="off"
+        inputmode="numeric"
+        placeholder="Ex: 1234"
+        mask="0000"
+      />
+    </mat-form-field>
+
+    <button
+      (click)="getAccess()"
+      [disabled]="idTotem.length < 4"
+      mat-flat-button
+      color="primary"
+    >
+      Confirmar
+    </button>
+  </form>
+</main>

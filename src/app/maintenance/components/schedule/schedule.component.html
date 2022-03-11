@@ -1,0 +1,27 @@
+<main class="container-fluid bg-middle h-container pt-title color-white">
+  <article class="row pb-option-title text-center d-flex flex-column">
+    <h1 class="h1 mat-display-4 mb-title">Agende Pelo App</h1>
+    <h3 class="mat-display-3">
+      Abra a câmera do seu celular e aponte<br />para o QR CODE, para agendar
+      sua<br />manutenção
+    </h3>
+  </article>
+
+  <article
+    class="row d-flex justify-content-center align-items-center flex-column mt-5"
+  >
+    <figure class="size-qr-code mb-title">
+      <img alt="qr-code" />
+    </figure>
+    <section class="mt-5 d-flex align-items-center">
+      <button
+        mat-flat-button
+        color="primary"
+        class="confirm-button"
+        (click)="backToStart()"
+      >
+        Concluir
+      </button>
+    </section>
+  </article>
+</main>

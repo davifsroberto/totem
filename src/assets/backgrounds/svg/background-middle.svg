@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="2000" viewBox="0 0 1200 2000">
+  <defs>
+    <clipPath id="clip-Background_Meio">
+      <rect width="1200" height="2000"/>
+    </clipPath>
+  </defs>
+  <g id="Background_Meio" data-name="Background  Meio" clip-path="url(#clip-Background_Meio)">
+    <rect width="1200" height="2000" fill="#222"/>
+    <g id="textura_felps_1_" data-name="textura felps (1)" transform="translate(1509.186 -1538.398) rotate(90)" opacity="0.2">
+      <path id="Caminho_137" data-name="Caminho 137" d="M2378.41,1436.522v-.062H1112.1a136.627,136.627,0,0,0-108.571,53.681L362.449,2329.2c-27.827,36.424-1.858,88.949,43.981,88.949H1508.379a151.03,151.03,0,0,0,117.185-55.752Z" transform="translate(1246.007 -42.962)" fill="none" stroke="#1bd60b" stroke-width="2"/>
+      <path id="Caminho_139" data-name="Caminho 139" d="M2985.415,2350.957l-600.828-903.068a36.433,36.433,0,0,1,1.725-42.746l3.885-4.925a36.453,36.453,0,0,0,1.876-42.514h0a36.44,36.44,0,0,0-30.494-16.483H332.343a57.125,57.125,0,0,0-47.964,26.094h0a59.96,59.96,0,0,0,3.787,70.368l763.568,940.631a79.179,79.179,0,0,0,61.469,29.276H2955.071C2984.17,2407.58,3001.533,2375.174,2985.415,2350.957Z" transform="translate(666.23 -206.034)" fill="none" stroke="#1bd60b" stroke-width="2"/>
+    </g>
+    <g id="textura_felps_1_2" data-name="textura felps (1)" transform="translate(3253.186 -377.898) rotate(90)" opacity="0.2">
+      <path id="Caminho_137-2" data-name="Caminho 137" d="M2378.41,1436.522v-.062H1112.1a136.627,136.627,0,0,0-108.571,53.681L362.449,2329.2c-27.827,36.424-1.858,88.949,43.981,88.949H1508.379a151.03,151.03,0,0,0,117.185-55.752Z" transform="translate(570.007 -45.962)" fill="none" stroke="#1bd60b" stroke-width="2"/>
+      <path id="Caminho_139-2" data-name="Caminho 139" d="M2985.415,2350.957l-600.828-903.068a36.433,36.433,0,0,1,1.725-42.746l3.885-4.925a36.453,36.453,0,0,0,1.876-42.514h0a36.44,36.44,0,0,0-30.494-16.483H332.343a57.125,57.125,0,0,0-47.964,26.094h0a59.96,59.96,0,0,0,3.787,70.368l763.568,940.631a79.179,79.179,0,0,0,61.469,29.276H2955.071C2984.17,2407.58,3001.533,2375.174,2985.415,2350.957Z" transform="translate(646.23 -133.034)" fill="none" stroke="#1bd60b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
