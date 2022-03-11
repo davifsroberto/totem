@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { catchError, map, Observable } from 'rxjs';
+
+import { environment } from '@src/environments/environment';
+import { BaseService } from '@app/core/services/base.service';
 import { BaseRequestResult } from '@app/core/models/base-request-result.model';
 import { Option } from '../models/option.model';
-import { map, Observable } from 'rxjs';
-import { BaseService } from '@app/core/services/base.service';
 import { CreateAttendanceModel } from '../models/create-attendance-model';
+import { User } from '../models/user';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class MaintenanceService extends BaseService {
+  totemMottuCityApi: string = environment.apiUrl.v2.totemMottuCity;
+
   constructor(private http: HttpClient) {
     super();
   }
 
-  validateClientByCpf(cpf: string): Observable<number> {
+  getUser(cpf: string): Observable<User> {
     return this.http
-      .get<BaseRequestResult<number>>('')
-      .pipe(map(super.extractData));
+      .get<BaseRequestResult<number>>(
+        `${this.totemMottuCityApi}finduserbycpf/${cpf}`
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
   }
 
   getOptions(): Observable<Option[]> {
