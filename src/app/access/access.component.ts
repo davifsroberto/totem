@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
@@ -6,15 +6,15 @@ import { Subscription } from 'rxjs';
 import { NotifierService } from 'angular-notifier';
 
 import { AccessService } from '@app/access/services/access.service';
-import { TotemOptions } from './models/options.enum';
-import { TotemAccess } from './models/totem-access';
+import { TotemAccess } from './models/totem-access.model';
+import { TotemOptions } from '../shared/models/options.enum';
 
 @Component({
   selector: 'app-access',
   templateUrl: './access.component.html',
   styleUrls: ['./access.component.scss']
 })
-export class AccessComponent implements OnDestroy {
+export class AccessComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
   totem: TotemAccess;
   idTotem: string = '';
@@ -26,8 +26,8 @@ export class AccessComponent implements OnDestroy {
     protected notifierService: NotifierService
   ) {}
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+  ngOnInit(): void {
+    localStorage.clear();
   }
 
   getAccess(): void {
@@ -71,5 +71,9 @@ export class AccessComponent implements OnDestroy {
         this.router.navigateByUrl('/maintenance');
         break;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

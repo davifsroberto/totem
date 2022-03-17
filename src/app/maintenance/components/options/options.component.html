@@ -1,66 +1,22 @@
-<main class="container-fluid color-white bg-dark pt-title h-container">
-  <article class="row pb-option-title text-center d-flex flex-column">
-    <h1 class="mat-display-4 mb-title">Serviços</h1>
-    <h3 class="mat-display-3">Olá, João, escolha um serviço.</h3>
-  </article>
+<main id="options">
+  <app-spinner *ngIf="spinner"></app-spinner>
 
-  <article
-    class="row d-flex align-items-center flex-column justify-content-center"
-  >
-    <section class="font-bold">
-      <div
-        class="h-option-button-parent d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-gauge fa-8x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-          (click)="goToConfirmOption()"
-        >
-          <span class="mat-display-3 m-0 ml-option">Revisão</span>
-        </div>
-      </div>
-      <div
-        class="h-option-button-parent mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-gear fa-8x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius color-black d-flex align-items-center"
-          (click)="goToConfirmOption()"
-        >
-          <span class="mat-display-3 m-0 ml-option">Corretiva</span>
-        </div>
-      </div>
-      <div
-        class="h-option-button-parent mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-bolt fa-8x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius color-black d-flex align-items-center"
-          (click)="goToQuickOptions()"
-        >
-          <span class="mat-display-3 m-0 ml-option">Rápidas</span>
-        </div>
-      </div>
-    </section>
-  </article>
+  <section>
+    <h1 class="mat-display-2">Serviços</h1>
+    <h3 class="mat-display-1">Olá, {{ userFirstName }}, escolha um serviço.</h3>
+  </section>
 
-  <article class="row d-flex justify-content-center mb-last-article">
-    <span
-      class="clickable underline fixed-bottom mat-display-2"
-      (click)="backToStart()"
-      >Cancelar</span
-    >
-  </article>
+  <section class="body-option-button" *ngFor="let option of options">
+    <div class="icon-option-button">
+      <i [ngClass]="option.icone" class="fa-4x"></i>
+    </div>
+
+    <div class="option-button" (click)="navigateToOptions(option)">
+      <span class="mat-display-2">{{ option.descricao }}</span>
+    </div>
+  </section>
+
+  <section class="footer-section">
+    <span class="mat-display-1" (click)="backToStart()">Cancelar</span>
+  </section>
 </main>

@@ -1,38 +1,32 @@
-<main class="container-fluid bg-end h-container pt-container color-white">
-  <article class="row d-flex flex-column align-items-center">
+<main id="confirm-option">
+  <app-spinner *ngIf="spinner"></app-spinner>
+
+  <section class="row d-flex flex-column align-items-center">
     <figure>
-      <img
-        alt="logo-mottu"
-        src="assets/logos/svg/mottu.svg"
-        class="size-logo mb-logo"
-      />
+      <img alt="logo-mottu" src="assets/logos/svg/mottu.svg" />
     </figure>
-    <h1 class="mat-display-4 mb-5">Confirmar Serviço</h1>
-  </article>
 
-  <article class="row mt-article d-flex flex-column align-items-center">
-    <section class="text-center d-flex flex-inline mat-display-3">
-      <h3 class="pr-1">Serviço:</h3>
-      <h3 class="color-text-mottu">"Revisão"</h3>
-    </section>
-    <section class="mt-article text-center">
-      <button
-        mat-flat-button
-        color="primary"
-        class="confirm-button"
-        (click)="goToConfirmedOption()"
-      >
-        Confirmar
-      </button>
-    </section>
-  </article>
+    <h1 class="mat-display-2">Confirmar Serviço</h1>
+  </section>
 
-  <article
-    class="row mt-article d-flex align-items-center justify-content-center"
-  >
-    <section (click)="backToOptions()">
-      <i class="fa-solid fa-angle-left fa-3x pr-1"></i>
-      <span class="clickable underline mat-display-2">Voltar</span>
-    </section>
-  </article>
+  <section class="section-service">
+    <h3 class="pr-1 mat-display-2">Serviço:</h3>
+    <h3 class="color-text-mottu mat-display-2">"{{ optionDescription }}"</h3>
+  </section>
+
+  <section class="section-button">
+    <button
+      mat-flat-button
+      color="primary"
+      class="confirm-button"
+      (click)="confirmAttendance()"
+    >
+      Confirmar
+    </button>
+  </section>
+
+  <section class="section-back" (click)="backToOptions()">
+    <i class="fas fa-angle-left fa-2x pr-1"></i>
+    <span class="mat-display-1">Voltar</span>
+  </section>
 </main>

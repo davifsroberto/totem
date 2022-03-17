@@ -1,32 +1,51 @@
-.bg-end {
+#confirm-option {
   background-image: url(../../../../assets/backgrounds/svg/background-end.svg);
-  background-position: 100% 70%;
   background-repeat: no-repeat;
   background-size: cover;
-}
+  height: 100vh;
+  padding-top: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 
-.color-text-mottu {
-  color: #00b131;
-}
+  section {
+    img {
+      width: 10em;
+    }
 
-.mb-logo {
-  margin-bottom: 1.5em;
-}
+    h1 {
+      margin-top: 0.5em;
+      font-weight: bold;
+      margin-bottom: 3em;
+    }
 
-.mt-article {
-  margin-top: 5em;
-}
+    .pr-1 {
+      padding-right: 0.25em;
+    }
 
-.underline {
-  text-decoration: underline;
-}
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
-.pr-1 {
-  padding-right: 0.25em;
-}
+    button {
+      font-size: 1.2rem;
+      padding: 0.5em 4em 0.5em 4em;
+    }
 
-.confirm-button {
-  font-size: 3em;
-  width: 7em;
-  height: 2em;
+    .color-text-mottu {
+      color: #00b131;
+    }
+  }
+
+  .section-service {
+    margin-top: 1em;
+    display: flex;
+  }
+
+  .section-back {
+    margin-top: 8em;
+  }
 }

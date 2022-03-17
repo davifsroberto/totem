@@ -6,7 +6,7 @@ import { catchError, map, Observable } from 'rxjs';
 import { environment } from '@src/environments/environment';
 import { BaseService } from '@app/core/services/base.service';
 import { BaseRequestResult } from '@app/core/models/base-request-result.model';
-import { TotemAccess } from '../models/totem-access';
+import { TotemAccess } from '../models/totem-access.model';
 
 @Injectable()
 export class AccessService extends BaseService {

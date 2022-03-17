@@ -1,125 +1,26 @@
-<main class="container-fluid color-white bg-dark pt-title h-container">
-  <article class="row pb-option-title text-center d-flex flex-column">
-    <h1 class="mat-display-4 mb-title">Serviços Rápidos</h1>
-    <h3 class="mat-display-3">Olá, João, escolha um serviço.</h3>
-  </article>
+<main id="quick-options">
+  <app-spinner *ngIf="spinner"></app-spinner>
 
-  <article
-    class="row d-flex align-items-center flex-column justify-content-center mt-option"
+  <section>
+    <h1 class="mat-display-2">Serviços Rápidos</h1>
+    <h3 class="mat-display-1">Olá, João, escolha um serviço.</h3>
+  </section>
+
+  <section
+    *ngFor="let option of options"
+    (click)="goToConfirmOption(option)"
+    class="body-option-button"
   >
-    <section class="font-bold">
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-gauge fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Revisão 100 km</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-wrench fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Regular Corrente</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-bagel fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Regular Freio</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-lightbulb fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Lâmpada</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-mobile-notch fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Suporte Celular</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-regular fa-battery-bolt fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Carregador</span>
-        </div>
-      </div>
-      <div
-        (click)="goToConfirmOption()"
-        class="h-option-button-child mt-option d-flex justify-content-center clickable"
-      >
-        <div
-          class="color-mottu w-option-icon bl-radius h-100 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-solid fa-circle-plus fa-6x"></i>
-        </div>
-        <div
-          class="bg-white w-option-button br-radius h-100 color-black d-flex align-items-center"
-        >
-          <span class="fz-option-child pl-option">Instalar Acessórios</span>
-        </div>
-      </div>
-    </section>
-  </article>
+    <div class="icon-option-button">
+      <i [ngClass]="option.icone" class="fa-3x"></i>
+    </div>
+    <div class="option-button">
+      <span class="mat-display-1">{{ option.descricao }}</span>
+    </div>
+  </section>
 
-  <article class="row d-flex align-items-center justify-content-center">
-    <section class="fixed-bottom" (click)="backToStart()">
-      <i class="fa-solid fa-angle-left fa-3x pr-1"></i>
-      <span class="clickable underline mat-display-2">Voltar</span>
-    </section>
-  </article>
+  <section class="footer-section" (click)="backToOptions()">
+    <i class="fas fa-angle-left fa-2x"></i>
+    <span class="mat-display-1">Voltar</span>
+  </section>
 </main>

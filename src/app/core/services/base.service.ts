@@ -6,7 +6,7 @@ import { BaseRequestResult } from '../models/base-request-result.model';
 
 export abstract class BaseService {
   protected extractData(response: BaseRequestResult<any>) {
-    return response.dataResult || {};
+    return response.dataResult;
   }
 
   protected serviceError(response: Response | any) {

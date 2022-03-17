@@ -1,4 +1,6 @@
 export interface CreateAttendanceModel {
-  clientId: number;
-  optionId: number;
+  usuarioId: number;
+  totemOpcaoId: number;
+  lugarId: number;
+  atendimentoId: number | null;
 }

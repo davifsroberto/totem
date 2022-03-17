@@ -1,79 +1,69 @@
-.clickable {
-  cursor: pointer;
-}
-
-.bg-dark {
+#quick-options {
   background-color: #222222;
-}
+  height: 100vh;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 
-.bg-white {
-  background-color: white;
-}
+  h1 {
+    margin-bottom: 0.5em;
+  }
 
-.color-black {
-  color: black;
-}
+  h3 {
+    margin-bottom: 3em;
+  }
 
-.bl-radius {
-  border-top-left-radius: 2.2em;
-  border-bottom-left-radius: 2.2em;
-}
+  .body-option-button {
+    cursor: pointer;
+    height: 4em;
+    margin-top: 2em;
+    display: flex;
 
-.br-radius {
-  border-top-right-radius: 2.2em;
-  border-bottom-right-radius: 2.2em;
-}
+    .icon-option-button {
+      background-color: #1bd60b;
+      width: 7em;
+      border-top-left-radius: 0.75em;
+      border-bottom-left-radius: 0.75em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.color-mottu {
-  background-color: #1bd60b;
-}
+    .option-button {
+      background-color: white;
+      width: 25em;
+      border-top-right-radius: 0.75em;
+      border-bottom-right-radius: 0.75em;
+      color: black;
 
-.pb-option-title {
-  padding-bottom: 4em;
-}
+      span {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+      }
+    }
+  }
 
-.w-option-icon {
-  width: 10em;
-}
+  .footer-section {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    margin-bottom: 10em;
 
-.w-option-button {
-  width: 40em;
-}
+    i {
+      padding-right: 0.25em;
+    }
 
-.underline {
-  text-decoration: underline;
-}
-
-.h-option-button-child {
-  height: 6em;
-}
-
-.pl-option {
-  margin-left: 2em;
-}
-
-.mt-option {
-  margin-top: 3em;
-}
-
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 4em;
-}
-
-.mb-title {
-  margin-bottom: 0.5em;
-}
-
-.pr-1 {
-  padding-right: 0.25em;
-}
-
-.fz-back {
-  font-size: 3em;
-}
-
-.fz-option-child {
-  font-size: 2.5em;
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 0;
+    }
+  }
 }

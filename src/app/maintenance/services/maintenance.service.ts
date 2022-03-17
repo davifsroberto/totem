@@ -8,7 +8,8 @@ import { BaseService } from '@app/core/services/base.service';
 import { BaseRequestResult } from '@app/core/models/base-request-result.model';
 import { Option } from '../models/option.model';
 import { CreateAttendanceModel } from '../models/create-attendance-model';
-import { User } from '../models/user';
+import { User } from '../../shared/models/user.model';
+import { Attendance } from '@app/shared/models/attendance.model';
 
 @Injectable()
 export class MaintenanceService extends BaseService {
@@ -18,40 +19,61 @@ export class MaintenanceService extends BaseService {
     super();
   }
 
-  getUser(cpf: string): Observable<User> {
+  getOptions(optionId: number, branchId: number): Observable<Option[]> {
     return this.http
-      .get<BaseRequestResult<number>>(
-        `${this.totemMottuCityApi}finduserbycpf/${cpf}`
+      .get<BaseRequestResult<Option[]>>(
+        `${environment.apiUrl.v2.totemMottuCity}TotemSubServices/${optionId}/${branchId}`
       )
       .pipe(map(super.extractData), catchError(super.serviceError));
   }
 
-  getOptions(): Observable<Option[]> {
+  getUser(cpf: string, optionId: number): Observable<User> {
     return this.http
-      .get<BaseRequestResult<Option[]>>('')
-      .pipe(map(super.extractData));
+      .get<BaseRequestResult<number>>(
+        `${this.totemMottuCityApi}CheckUserTotemOption/${cpf}/${optionId}`
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
   }
 
-  getQuickOptions(): Observable<Option[]> {
-    return this.http
-      .get<BaseRequestResult<Option[]>>('')
-      .pipe(map(super.extractData));
-  }
-
-  verifySchedule(
-    clientId: number,
-    scheduleTypeId: number
+  getSchedule(
+    userId: number,
+    optionId: number,
+    branchId: number
   ): Observable<boolean> {
     return this.http
-      .get<BaseRequestResult<boolean>>('')
-      .pipe(map(super.extractData));
+      .get<BaseRequestResult<boolean>>(
+        `${this.totemMottuCityApi}UserHasActiveScheduling/${userId}/${optionId}/${branchId}`
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
   }
 
-  createAttendance(
+  postAttendance(
     createAttendanceModel: CreateAttendanceModel
-  ): Observable<CreateAttendanceModel> {
+  ): Observable<string> {
     return this.http
-      .post<BaseRequestResult<CreateAttendanceModel>>('', createAttendanceModel)
-      .pipe(map(super.extractData));
+      .post<BaseRequestResult<CreateAttendanceModel>>(
+        `${environment.apiUrl.v2.totemMottuCity}SaveTotemAttendance`,
+        createAttendanceModel
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
+  }
+
+  getActiveAttendance(cpf: string): Observable<Attendance> {
+    return this.http
+      .get<BaseRequestResult<Attendance>>(
+        `${environment.apiUrl.v2.totemMottuCity}LastUserActiveAttendance/${cpf}`
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
+  }
+
+  postChangeAttendance(
+    changeAttendanceModel: CreateAttendanceModel
+  ): Observable<string> {
+    return this.http
+      .post<BaseRequestResult<CreateAttendanceModel>>(
+        `${environment.apiUrl.v2.totemMottuCity}ChangeTotemAttendance`,
+        changeAttendanceModel
+      )
+      .pipe(map(super.extractData), catchError(super.serviceError));
   }
 }

@@ -1,27 +1,26 @@
-<main class="container-fluid bg-middle h-container pt-title color-white">
-  <article class="row pb-option-title text-center d-flex flex-column">
-    <h1 class="h1 mat-display-4 mb-title">Agende Pelo App</h1>
-    <h3 class="mat-display-3">
-      Abra a câmera do seu celular e aponte<br />para o QR CODE, para agendar
-      sua<br />manutenção
-    </h3>
-  </article>
-
-  <article
-    class="row d-flex justify-content-center align-items-center flex-column mt-5"
-  >
-    <figure class="size-qr-code mb-title">
-      <img alt="qr-code" />
+<main id="schedule">
+  <section>
+    <figure>
+      <img alt="logo-mottu" src="assets/logos/svg/mottu.svg" />
     </figure>
-    <section class="mt-5 d-flex align-items-center">
-      <button
-        mat-flat-button
-        color="primary"
-        class="confirm-button"
-        (click)="backToStart()"
-      >
-        Concluir
-      </button>
-    </section>
-  </article>
+  </section>
+
+  <section>
+    <h1 class="mat-display-2">Agende Pelo App</h1>
+    <h3 class="mat-display-1">
+      Percebemos que você não possuí <br />
+      agendamento para fazer manutenção,<br />
+      siga o passo a passo e agende um horário
+    </h3>
+    <h3 class="mat-display-1">
+      logue no app > clique em <br />manutençao > siga os passos <br />do
+      agendamento
+    </h3>
+  </section>
+
+  <section>
+    <button mat-flat-button color="primary" (click)="backToStart()">
+      Concluir
+    </button>
+  </section>
 </main>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,10 +6,20 @@ import { Router } from '@angular/router';
   templateUrl: './schedule.component.html',
   styleUrls: ['./schedule.component.scss']
 })
-export class MaintenanceScheduleComponent {
-  constructor(private router: Router) {}
+export class MaintenanceScheduleComponent implements OnDestroy {
+  timeout: any;
+
+  constructor(private router: Router) {
+    this.timeout = setTimeout(() => {
+      this.backToStart();
+    }, 30000);
+  }
 
   backToStart(): void {
     this.router.navigateByUrl('maintenance');
+  }
+
+  ngOnDestroy(): void {
+    clearTimeout(this.timeout);
   }
 }

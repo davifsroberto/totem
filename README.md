@@ -36,7 +36,7 @@ Execute `npm run pretty` para formatar os arquivos do projeto de acordo com a co
 
 ## Info:
 
-- [Código Fonte](https://dev.azure.com/mottu-ops/Mottu%20Entregas/_git/mottu-entregas-admin)
+- [Código Fonte](https://github.com/Mottu-ops/Totem_Front)
 
 Projeto publicado em:
 

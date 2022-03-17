@@ -21,11 +21,11 @@ const routes: Routes = [
         component: MaintenanceStartComponent
       },
       {
-        path: 'options',
+        path: 'options/:attendanceId?',
         component: MaintenanceOptionsComponent
       },
       {
-        path: 'confirm-option',
+        path: 'confirm-option/:optionId/:optionDescription/:attendanceId?',
         component: MaintenanceConfirmOptionComponent
       },
       {
@@ -33,7 +33,7 @@ const routes: Routes = [
         component: MaintenanceComfirmedOptionComponent
       },
       {
-        path: 'quick-options',
+        path: 'quick-options/:attendanceId?',
         component: MaintenanceQuickOptionComponent
       },
       {
@@ -41,7 +41,7 @@ const routes: Routes = [
         component: MaintenanceScheduleComponent
       },
       {
-        path: 'open-option',
+        path: 'open-option/:optionId/:optionDescription',
         component: MaintenanceOpenOptionComponent
       }
     ]
